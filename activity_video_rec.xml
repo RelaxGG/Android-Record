@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <SurfaceView
+                android:id="@+id/surface_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/video_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="双击放大"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="12dp" />
+            <ImageView
+                android:id="@+id/camera_cut"
+                android:src="@drawable/m_camera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#000"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/press_rl_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.ourstu.opensnsh5.record.VideoBar
+                    android:id="@+id/video_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#000"/>
+                <TextView
+                    android:height="100dp"
+                    android:width="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/my_cir_bg"
+                    android:id="@+id/rec_trigger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="按住拍"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#00ff00"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tools_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/del_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:text="放弃"
+                    android:padding="10dp"
+                    android:layout_alignBaseline="@+id/play_btn"
+                    android:layout_alignBottom="@+id/play_btn"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="40dp" />
+                <TextView
+                    android:width="80dp"
+                    android:height="80dp"
+                    android:id="@+id/play_btn"
+                    android:background="@drawable/my_cir_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="播放"
+                    android:textColor="#fff"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/okay_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确认"
+                    android:padding="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#00ff00"
+                    android:layout_marginEnd="40dp"
+                    android:layout_alignBaseline="@+id/play_btn"
+                    android:layout_alignBottom="@+id/play_btn"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vd_countdown"
+        android:visibility="invisible"
+        android:textColor="#ff0000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
